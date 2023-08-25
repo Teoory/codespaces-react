@@ -2,7 +2,7 @@
   "name": "codespaces-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://benimsitem.live",
+  "homepage": "/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@fortawesome/fontawesome-free": "^6.2.1",
@@ -80,7 +80,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "start": "BROWSER=none WDS_SOCKET_PORT=0 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
