@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './pages/HomePage/HomePage';
@@ -10,7 +10,7 @@ document.title = "Berkay Köksal | My Portfolio";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Navbar />
         <div id="page-body">
@@ -23,7 +23,7 @@ function App() {
             </div>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
