@@ -1,28 +1,29 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Navbar from './components/Navbar/Navbar';
+import HomePage from './pages/HomePage/HomePage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import LoginPages from './pages/LoginPage/LoginPage';
+document.title = "Berkay Köksal | My Portfolio";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <div id="page-body">
+            <div>
+              <Routes>
+                <Route path="/" element= {<HomePage/>} />
+                <Route path="*" element= {<NotFoundPage/>} />
+                <Route path="/LoginPages" element= {<LoginPages/>} />
+              </Routes>
+            </div>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
